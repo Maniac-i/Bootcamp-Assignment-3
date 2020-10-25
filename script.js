@@ -11,7 +11,7 @@ function writePassword() {
 
 }
 
-//Clears password
+//Add event listener to Clear Password button to clear password
 clearBtn.addEventListener("click", () => {
   document.getElementById("password").value = "";
 })
