@@ -37,10 +37,12 @@ function characaterSet() {
     charSet += numbers;
   } if (passwordSpecial === true) {
     charSet += specialCharacters;
+  } else if (passwordLowerCase === false && passwordUpperCase === false && passwordNumbers === false && passwordSpecial === false) { 
+    alert("Choose at least one citeria");
+
   }
 
 }
-
 
 //Generates password
 function generatePassword() {
@@ -56,8 +58,10 @@ function generatePassword() {
 
 for (var i = 0; i < passwordLength; i++) {
 
-    pickRandom();
-
+  pickRandom();
+  
   }
+
   return passwordString;
+  
 }
