@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  
   passwordText.value = password;
 
 }
@@ -13,29 +13,33 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Add event listner to generate password
-generateBtn.addEventListener("click", newPassword);
-
-var password = "";
-var specialCharacters = "`~!@$%^&*()_-[]{}|?/.,<>+=;:' ";
+//Variables for character sets
+var passwordString = "";
+var specialCharacters = "`~!@$%^&*()_-[]{}|?.,<>+=;:";
 var lowerAlpha = "abcdefghijklmnopqrstuvwxyz";
 var upperAlpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789"
 
 
+//Picks random character from character set and adds it to the passwordString
+function pickRandom() {
+  passwordString += charSet.charAt(Math.floor(Math.random() * charSet.length));
+}
 
-function newPassword() {
+//Generates password
+function generatePassword() {
 
   passwordLength = prompt("Enter a password lenght between 8 and 128");
   passwordLowerCase = confirm("Do you want to use lowercase letters");
   passwordUpperCase = confirm("Do you want to use uppercase letters");
   passwordNumbers = confirm("Do you want to use numbers");
-  passwordspecial = confirm("Do you want to use special characters");
+  passwordSpecial = confirm("Do you want to use special characters");
 
-for (var i = 0; i <= passwordLength; i++) {
+for (var i = 0; i < passwordLength; i++) {
 
-  if (passwordLowerCase === true && passwordUpperCase === true )
-
-
-}
+  if (passwordLowerCase === true && passwordUpperCase === true && passwordNumbers === true && passwordSpecial === true);
+    charSet = numbers + specialCharacters + lowerAlpha + upperAlpha;
+    pickRandom();
+  }
+return passwordString;
 }
