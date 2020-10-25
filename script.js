@@ -16,6 +16,13 @@ generateBtn.addEventListener("click", writePassword);
 // Add event listner to generate password
 generateBtn.addEventListener("click", newPassword);
 
+var password = "";
+var specialCharacters = "`~!@$%^&*()_-[]{}|?/.,<>+=;:' ";
+var lowerAlpha = "abcdefghijklmnopqrstuvwxyz";
+var upperAlpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "0123456789"
+
+
 
 function newPassword() {
 
@@ -25,5 +32,10 @@ function newPassword() {
   passwordNumbers = confirm("Do you want to use numbers");
   passwordspecial = confirm("Do you want to use special characters");
 
+for (var i = 0; i <= passwordLength; i++) {
 
+  if (passwordLowerCase === true && passwordUpperCase === true )
+
+
+}
 }
