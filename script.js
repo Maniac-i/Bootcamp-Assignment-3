@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var clearBtn = document.querySelector("#clear")
 
 // Write password to the #password input
 function writePassword() {
@@ -9,6 +10,11 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
+//Clears password
+clearBtn.addEventListener("click", () => {
+  document.getElementById("password").value = "";
+})
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
