@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  
+
   passwordText.value = password;
 
 }
@@ -24,12 +24,13 @@ var charSet = "";
 //Picks random character from character set and adds it to the passwordString
 function pickRandom() {
   passwordString += charSet.charAt(Math.floor(Math.random() * charSet.length));
+
 }
 
 //Determines character set for the password
 function characaterSet() {
 
-  if (passwordLowerCase === true){
+  if (passwordLowerCase === true) {
     charSet += lowerAlpha;
   } if (passwordUpperCase === true) {
     charSet += upperAlpha;
@@ -37,7 +38,7 @@ function characaterSet() {
     charSet += numbers;
   } if (passwordSpecial === true) {
     charSet += specialCharacters;
-  } else if (passwordLowerCase === false && passwordUpperCase === false && passwordNumbers === false && passwordSpecial === false) { 
+  } else if (passwordLowerCase === false && passwordUpperCase === false && passwordNumbers === false && passwordSpecial === false) {
     alert("Choose at least one citeria");
 
   }
@@ -53,15 +54,15 @@ function generatePassword() {
   passwordUpperCase = confirm("Do you want to use uppercase letters");
   passwordNumbers = confirm("Do you want to use numbers");
   passwordSpecial = confirm("Do you want to use special characters");
-  
+
   characaterSet();
 
-for (var i = 0; i < passwordLength; i++) {
+  for (var i = 0; i < passwordLength; i++) {
 
-  pickRandom();
-  
+    pickRandom();
+
   }
 
   return passwordString;
-  
+
 }
