@@ -62,8 +62,8 @@ function generatePassword() {
   passwordUpperCase = confirm("Do you want to use uppercase letters");
   passwordNumbers = confirm("Do you want to use numbers");
   passwordSpecial = confirm("Do you want to use special characters");
-
-  characaterSet();
+ 
+  characaterSet(); 
 
   for (var i = 0; i < passwordLength; i++) {
 
