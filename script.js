@@ -1,3 +1,11 @@
+//Variables for character sets
+var passwordString = "";
+var specialCharacters = "`~!@$%^&*()_-[]{}|?.,<>+=;:";
+var lowerAlpha = "abcdefghijklmnopqrstuvwxyz";
+var upperAlpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "0123456789"
+var charSet = "";
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var clearBtn = document.querySelector("#clear")
@@ -14,18 +22,12 @@ function writePassword() {
 //Add event listener to Clear Password button to clear password
 clearBtn.addEventListener("click", () => {
   document.getElementById("password").value = "";
+  charSet = "";
+  passwordString = "";
 })
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-//Variables for character sets
-var passwordString = "";
-var specialCharacters = "`~!@$%^&*()_-[]{}|?.,<>+=;:";
-var lowerAlpha = "abcdefghijklmnopqrstuvwxyz";
-var upperAlpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numbers = "0123456789"
-var charSet = "";
 
 //Picks random character from character set and adds it to the passwordString
 function pickRandom() {
