@@ -8,15 +8,22 @@ var charSet = "";
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var clearBtn = document.querySelector("#clear")
+var clearBtn = document.querySelector("#clear");
 
 // Write password to the #password input
 function writePassword() {
+  passwordLength = prompt("Enter a password length between 8 and 128");
+  
+  //Dont generate password if a number between 8 and 128 isnt entered
+  if (passwordLength === null || passwordLength < 8) {
+    alert("You didnt enter a number between 8 and 128");
+  } else {
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+  }
 }
 
 //Add event listener to Clear Password button to clear password
@@ -57,13 +64,12 @@ function characaterSet() {
 function generatePassword() {
 
   //Gets password criteria from user
-  passwordLength = prompt("Enter a password lenght between 8 and 128");
   passwordLowerCase = confirm("Do you want to use lowercase letters");
   passwordUpperCase = confirm("Do you want to use uppercase letters");
   passwordNumbers = confirm("Do you want to use numbers");
   passwordSpecial = confirm("Do you want to use special characters");
- 
-  characaterSet(); 
+
+  characaterSet();
 
   for (var i = 0; i < passwordLength; i++) {
 
