@@ -1,7 +1,7 @@
 # Bootcamp-Assignment-3
 
 
-This project is Asssignment 3 for the OSU Bootcamp. The goal of the project was to make a working random password generator that took several prompts from the user and returned a password that match the selected criteria. This projected utilized Javascript and provided practice with <b>declaring variables, if..else statements, for loops, and functions<b>. 
+This project is Asssignment 3 for the OSU Bootcamp. The goal of the project was to make a working random password generator that took several prompts from the user and returned a password that match the selected criteria. This projected utilized Javascript and provided practice with **declaring variables, if..else statements, for loops, and functions**. 
   
   The password generator had to satisfy the followsing requirements:
   
@@ -24,4 +24,4 @@ THEN the password is either displayed in an alert or written to the page
 
 The html/css used to build the interface was given to us. An image of given interace is below.
 
-![](
+![](https://github.com/Maniac-i/Bootcamp-Assignment-3/blob/main/Assets/03-javascript-homework-demo.png?raw=true)
