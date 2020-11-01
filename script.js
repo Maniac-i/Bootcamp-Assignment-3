@@ -15,7 +15,7 @@ function writePassword() {
   passwordLength = prompt("Enter a password length between 8 and 128");
   
   //Dont generate password if a number between 8 and 128 isnt entered
-  if (passwordLength === null || passwordLength < 8) {
+  if (passwordLength === null || passwordLength < 8 || passwordLength > 128) {
     alert("You didnt enter a number between 8 and 128");
   } else {
 
@@ -45,7 +45,7 @@ function pickRandom() {
 //Determines character set for the password
 function characaterSet() {
 
-  if (passwordLowerCase === true) {
+    if (passwordLowerCase === true) {
     charSet += lowerAlpha;
   } if (passwordUpperCase === true) {
     charSet += upperAlpha;
